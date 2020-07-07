@@ -1,0 +1,45 @@
+﻿<Window x:Class="Calculator_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator_App"
+        mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="800" FontSize="30" FontStyle="Italic">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Left Oprand" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" />
+        <TextBlock Text="Right Oprand" Grid.Column="4" Grid.ColumnSpan="2" HorizontalAlignment="Center"  />
+        <TextBlock Text="Result" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4" HorizontalAlignment="Center"  />
+        <TextBlock x:Name="add_result" Text="0.0" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="5" TextAlignment="Center"  Width="150"  />
+        <TextBox x:Name="Left_oprand" Grid.Column="1 " Grid.Row="1" Grid.ColumnSpan="2" />
+        <TextBox x:Name="Right_oprand" Grid.Column="4 " Grid.Row="1" Grid.ColumnSpan="2" />
+
+
+        <Button x:Name="Plus_button"  Content="+"  Grid.Column="1"   Grid.Row="2"  Background="Beige" Click="Plus_button_Click"  />
+        <Button x:Name="Minus_button"  Content="-"  Grid.Column="2"   Grid.Row="2"  Background="Beige"  />
+        <Button x:Name="Multiply_button" Content="*"    Grid.Column="3"   Grid.Row="2"  Background="Beige"  />
+        <Button x:Name="Divide_button"  Content="/"  Grid.Column="4"   Grid.Row="2"  Background="Beige"  />
+        <Button x:Name="Power_button"  Content="^"  Grid.Column="5"   Grid.Row="2"  Background="Beige"  />
+
+
+
+    </Grid>
+</Window>
